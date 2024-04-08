@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- header-section -->
+        <div class="col-12 col-xl-12 bg-head border-gray py-3">
+            <div class="container">
+                <div class="col-xl-12 row align-items-center justify-content-between m-0">
+                    <div class="col-12 col-sm-12 col-md-2 col-lg-3 col-xl-2 text-center p-0">
+                        <a href="#"><img src="images/home/head-logo.png" alt="logo-image"></a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-10 col-lg-9 col-lg-8 col-xl-7 row flex-md-row align-items-center justify-content-between mt-sm-2 mt-md-2 p-0 mx-0">
+                        <div class="col-12 col-sm-5 col-md-6 col-lg-6 col-xl-6 p-0">
+                            <ul class="m-0 text-end top_menu">
+                                <li class="d-inline-block px-3 px-sm-2 px-md-3 px-lg-3 px-xl-4"><a href="#" class="textgray-100 text-decoration-none fs-6 textorangehover">Buy</a></li>
+                                <li class="d-inline-block px-3 px-sm-2 px-md-3 px-lg-3 px-xl-4"><a href="#" class="textgray-100 text-decoration-none fs-6 textorangehover">Sell</a></li>
+                                <li class="d-inline-block px-3 px-sm-2 px-md-3 px-lg-3 px-xl-4"><a href="#" class="textgray-100 text-decoration-none fs-6 textorangehover">Help!</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-7 col-md-6 col-xl-6 d-flex justify-content-around justify-content-sm-end justify-content-md-end justify-content-xl-end gap-3 px-sm-0 p-xl-0 mt-3 mt-sm-0 pt-xl-0 p-0">
+                            <a href="#" class="bgdark text-decoration-none d-inline-block rounded px-lg-3 px-xl-3 py-2 text_white px-2 fs-14 grayhover transition">List your property</a>
+                            <a href="#" class="textdarkgray text-decoration-none bglight rounded md-4 py-2 d-inline-block px-xl-4 px-2 fs-14 whitehover transition">Signup or Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <!-- innerbanner-section -->
+        <div class="col-12 col-xl-12 bg-head position-relative" style="height: 210px">
+            <div class="container">
+                <div class="col-12 col-xl-12 position-relative pt-4">
+                    <div class="col-12 col-xl-12 d-flex flex-column justify-content-center align-items-xl-start align-items-center pt-4 mt-4">
+                        <div class="col-12 col-xl-12 text-center">
+                            <h2 class="text_white fs-2 mb-2">Search Projects Around the World</h2>
+                        </div>
+                        <div class="col-12 col-xl-12">
+                            <p class="textgray-100 d-flex gap-3 align-items-xl-start justify-content-xl-start justify-content-center align-items-center">
+                                Home
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="text-orange">Project Search</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- search bar -->
+        <div class="col-xl-12 my-2 pt-4 pt-xl-0">
+            <div class="container">
+                <div class="col-md-9 col-xl-9 mx-auto">
+                    <div class="input-group mb-3 position-relative search_sec">
+                        <input type="text" class="py-3 px-3 px-xl-4 form-control fs-6 rounded-8" placeholder="Ask Minex All" style="z-index: 0;">
+                        <button class="bgdark position-absolute top-0 end-0 border rounded fs-6 text-decoration-none text-white whitehover" type="button" id="search-button" style="z-index: 1;">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- projects flitering section -->
+        <div class="col-12 col-xl-12 my-2 py-2 py-xl-4 my-xl-4">
+            <div class="container">
+                <div class="col-xl-12 row justify-content-between my-2 py-2">
+                    <div class="col-md-12 col-xl-3 px-2">
+                        <div class="my-3 position-relative">
+                            <img src="images/listing/list_right.png" class="w-100" alt="list-filter-image">
+                            <div class="col-xl-12 text-center d-flex align-items-center justify-content-center position-absolute start-0 top-0 end-0 bottom-0">
+                                <a href="#" class="text-decoration-none text_white bgdark fs-6 py-2 px-4 rounded d-inline-block  lh-6 whitehover">Show on Earth <span class="ms-2"><img src="images/home/maps-image.png" alt="map-image"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 d-none d-lg-block">
+                            <!-- Filter by Commodities -->
+                            <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 listborder rounded-top border-bottom-0 border-2 border-gray">
+                                <div class="col-md-12 col-xl-12 border-bottom py-2">
+                                    <span class="lh-24">Filter By</span>
+                                    <a class="float-end text-decoration-none textgray-100 lh-24 fs-14">Clear all</a>
+                                </div>
+                                <span class="fs-14 lh-20 fw-600">Commodities</span>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                        Coal
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="commoditis_filter1">
+                                    <label class="form-check-label fs-14 lh-20" for="commoditis_filter1">
+                                        Cobalt
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">35</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="commoditis_filter2">
+                                    <label class="form-check-label fs-14 lh-20" for="commoditis_filter2">
+                                        Copper
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">65</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="commoditis_filter3">
+                                    <label class="form-check-label fs-14 lh-20" for="commoditis_filter3">
+                                        Energy
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="commoditis_filter4"
+                                        checked>
+                                    <label class="form-check-label fs-14 lh-20" for="commoditis_filter4">
+                                        Gold
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">14</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="commoditis_filter5">
+                                    <label class="form-check-label fs-14 lh-20" for="commoditis_filter5">
+                                        Graphite
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">59</span>
+                                </div>
+                                <a class="fs-14 lh-20 fw-600 text-decoration-none textdarkgray">See All</a>
+                            </div>
+                            <!-- Filter by Development stage -->
+                            <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 listborder border-bottom-0 border-2 border-gray">
+                                <span class="fs-14 lh-20 fw-600">Development Stage</span>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1"
+                                        checked>
+                                    <label class="form-check-label fs-14 lh-20" for="flexCheckDefault1">
+                                        Exploration
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">98</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="project_filter2">
+                                    <label class="form-check-label fs-14 lh-20" for="project_filter2">
+                                        Feasibility
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="project_filter3">
+                                    <label class="form-check-label fs-14 lh-20" for="project_filter3">
+                                        Permitting
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="project_filter4">
+                                    <label class="form-check-label fs-14 lh-20" for="project_filter4">
+                                        Construction
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="project_filter5">
+                                    <label class="form-check-label fs-14 lh-20" for="project_filter5">
+                                        Production
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="project_filter6">
+                                    <label class="form-check-label fs-14 lh-20" for="project_filter6">
+                                        Closure & Reclamation
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                </div>
+                            </div>
+                            <!-- Property type -->
+                            <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 listborder border-bottom-0 border-2 border-gray">
+                                <span class="fs-14 lh-20 fw-600">Property Type</span>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                    <label class="form-check-label fs-14 lh-20" for="flexCheckDefault3">
+                                        Underground
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="protype_filter1">
+                                    <label class="form-check-label fs-14 lh-20" for="protype_filter1">
+                                        Open Surface(pit)
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">35</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="protype_filter2">
+                                    <label class="form-check-label fs-14 lh-20" for="protype_filter2">
+                                        Placer
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">65</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="protype_filter3">
+                                    <label class="form-check-label fs-14 lh-20" for="protype_filter3">
+                                        In-situ mining
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                            </div>
+                            <!-- Filter by activity status -->
+                            <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 listborder border-bottom-0 border-2 border-gray">
+                                <span class="fs-14 lh-20 fw-600">Activity Status</span>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4"
+                                        checked>
+                                    <label class="form-check-label fs-14 lh-20" for="flexCheckDefault4">
+                                        Active
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter">
+                                        Explored
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">35</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter2">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter2">
+                                        Abandoned
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">65</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter3">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter3">
+                                        Reclaimed
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter4">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter4">
+                                        Permitted
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter5">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter5">
+                                        Suspended
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter6">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter6">
+                                        Reserved
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activity_filter7">
+                                    <label class="form-check-label fs-14 lh-20" for="activity_filter7">
+                                        Developing
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                </div>
+                            </div>
+                            <!-- Filter by Contractor activity -->
+                            <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 listborder rounded-bottom border-bottom-1 border-2 border-gray mb-3">
+                                <span class="fs-14 lh-20 fw-600">Contractor Activity</span>
+                                <div class="col-md-12 col-xl-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                                    <label class="form-check-label fs-14 lh-20" for="flexCheckDefault5">
+                                        Active
+                                    </label>
+                                    <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile view filter start -->
+                        <button class="bgdark rounded px-4 text_white d-block d-lg-none" id="menuButton"
+                            onclick="toggleFilterPanel()">Filter</button>
+                        <!-- Filter panel -->
+
+
+                        <div id="filterPanel" class="filter-panel bg-white border border-end border-2 border-gray">
+                            <!-- Filter content -->
+                            <button type="button" class="btn-close align-self-end m-3" aria-label="Close"
+                                onclick="toggleFilterPanel()"></button>
+                            <div class="p-3 gap-2">
+                                <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 border rounded-top border-bottom-0 border-2 border-gray">
+                                    <div class="col-md-12 col-xl-12 border-bottom py-2">
+                                        <span class="lh-24">Filter By</span>
+                                        <a class="float-end text-decoration-none textgray-100 lh-24 fs-14">Clear all</a>
+                                    </div>
+                                    <span class="fs-14 lh-20 fw-600">Commodities</span>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                            Coal
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Cobalt
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">35</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Copper
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">65</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Energy
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter"
+                                            checked>
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Gold
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">14</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Graphite
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">59</span>
+                                    </div>
+                                    <a class="fs-14 lh-20 fw-600 text-decoration-none textdarkgray">See All</a>
+                                </div>
+                                <!-- Filter by Development stage -->
+                                <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 border border-bottom-0 border-2 border-gray">
+                                    <span class="fs-14 lh-20 fw-600">Development Stage</span>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                            checked>
+                                        <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                            Exploration
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">98</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Feasibility
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Permitting
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Construction
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Production
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Closure & Reclamation
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">21</span>
+                                    </div>
+                                </div>
+                                <!-- Property type -->
+                                <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 border border-bottom-0 border-2 border-gray">
+                                    <span class="fs-14 lh-20 fw-600">Property Type</span>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                            Underground
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Open Surface(pit)
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">35</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Placer
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">65</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            In-situ mining
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">42</span>
+                                    </div>
+                                </div>
+                                <!-- Filter by activity status -->
+                                <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 border border-bottom-0 border-2 border-gray">
+                                    <span class="fs-14 lh-20 fw-600">Activity Status</span>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                            checked>
+                                        <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                            Active
+                                        </label>
+                                        <span class="float-end text-decoration-none textgray-100 lh-24 fs-14">15</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Explored
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">35</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Abandoned
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">65</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Reclaimed
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">42</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Permitted
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">42</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Suspended
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">42</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Reserved
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">42</span>
+                                    </div>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="project_filter">
+                                        <label class="form-check-label fs-14 lh-20" for="project_filter">
+                                            Developing
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">42</span>
+                                    </div>
+                                </div>
+                                <!-- Filter by Contractor activity -->
+                                <div class="d-flex flex-column justify-content-center align-items-start p-3 gap-2 border rounded-bottom border-bottom-1 border-2 border-gray mb-3">
+                                    <span class="fs-14 lh-20 fw-600">Contractor Activity</span>
+                                    <div class="col-md-12 col-xl-12 form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label fs-14 lh-20" for="flexCheckDefault">
+                                            Active
+                                        </label>
+                                        <span class="float-end text-decoration-none textdarkgray lh-24 fs-14">15</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Mobile view filter end -->
+
+                    </div>
+
+                    <div class="col-md-12 col-xl-9 p-0 ps-3">
+                        <div class="col-sm-12 col-xl-12 my-3 flex-row justify-content-between">
+                            <div class="col-12 col-xl-12 d-flex flex-row justify-content-between">
+                                <h2 class="fs-4 textdarkgray lh-30 mb-2 d-inline-block">14 projects found</h2>
+                                <select class="form-select fs-14 float-end w-25 sort_by position-relative">
+                                    <option selected="">Sort by: Our Top Picks</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-xl-12">
+                                <p class="rounded py-2 px-3 fs-14 textdarkgray bglight d-inline-block text-center mt-2">
+                                    Gold<span class="ms-2 bgclose px-1 rounded fs-12"><i class="fa fa-times" aria-hidden="true"></i></span></p>
+                                <p class="rounded py-2 px-3 fs-14 textdarkgray bglight d-inline-block text-center mt-2">
+                                    Exploration<span class="ms-2 bgclose px-1 rounded fs-12"><i class="fa fa-times" aria-hidden="true"></i></span></p>
+                                <p class="rounded py-2 px-3 fs-14 textdarkgray bglight d-inline-block text-center mt-2">
+                                    Active<span class="ms-2 bgclose px-1 rounded fs-12"><i class="fa fa-times" aria-hidden="true"></i></span></p>
+                                <a  href="#" class="text-decoration-none text-orange lh-24 fs-14 ps-3 fm-bold textgrayhover">Clear all</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-12 row my-4 align-items-center">
+                            <div class="col-xl-4 mb-2 mb-xl-0">
+                                <div class="project_imgs">
+                                    <img src="images/listing/list1.png" class="w-100 rounded" alt="explore-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div>
+                                    <h3 class="textdarkgray fs-18">Sale of Mining and Exploration Tenements (Qld & SA),
+                                        and CIL Processing Plant (Qld)</h3>
+                                    <p class="col-12 textgray-100 lh-20 fs-14 py-2">Gold mining can have
+                                        significant environmental and social impacts. It often involves the clearing of
+                                        land, displacement of local communities, and the use of large amounts of water
+                                        and chemicals. Mining operations can also result.</p>
+                                    <div class="d-flex justify-content-between flex-column flex-xl-row gap-3 align-items-cen mt-2">
+                                        <div>
+                                            <span class="gol_icon position-relative pe-4 textgray-100 fs-14">Gold</span>
+                                            <p class="border-start d-inline-block px-3 textgray-100 fs-14"><span
+                                                    class="me-3"><img src="images/listing/aff.png"
+                                                        alt="africa"></span>Africa</p>
+                                        </div>
+                                        <a href="#"
+                                            class="bgdark border rounded py-2 px-4 fs-14 text-decoration-none text_white d-inline-block text-center whitehover">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-12 row my-4 align-items-center">
+                            <div class="col-xl-4 mb-2 mb-xl-0">
+                                <div class="project_imgs">
+                                    <img src="images/listing/list2.png" class="w-100 rounded" alt="explore-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div>
+                                    <h3 class="textdarkgray fs-18">Sale of Mining and Exploration Tenements (Qld & SA),
+                                        and CIL Processing Plant (Qld)</h3>
+                                    <p class="col-sm-12 textgray-100 lh-20 fs-14 py-2">Gold mining can have
+                                        significant environmental and social impacts. It often involves the clearing of
+                                        land, displacement of local communities, and the use of large amounts of water
+                                        and chemicals. Mining operations can also result.</p>
+                                    <div class="d-flex justify-content-between flex-column flex-xl-row gap-3 align-items-center mt-2">
+                                        <div>
+                                            <span class="gol_icon position-relative pe-4 textgray-100 fs-14">Gold</span>
+                                            <p class="border-start d-inline-block px-3 textgray-100 fs-14"><span
+                                                    class="me-3"><img src="images/listing/aff.png"
+                                                        alt="africa"></span>Africa</p>
+                                        </div>
+                                        <a href="#"
+                                            class="bgdark border rounded py-2 px-4 fs-14 text-decoration-none text_white d-inline-block text-center whitehover">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-12 row my-4 align-items-center">
+                            <div class="col-xl-4 mb-2 mb-xl-0">
+                                <div class="project_imgs">
+                                    <img src="images/listing/list3.png" class="w-100 rounded" alt="explore-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div>
+                                    <h3 class="textdarkgray fs-18">Sale of Mining and Exploration Tenements (Qld & SA),
+                                        and CIL Processing Plant (Qld)</h3>
+                                    <p class="col-sm-12 textgray-100 lh-20 fs-14 py-2">Gold mining can have
+                                        significant environmental and social impacts. It often involves the clearing of
+                                        land, displacement of local communities, and the use of large amounts of water
+                                        and chemicals. Mining operations can also result .</p>
+                                    <div class="d-flex justify-content-between flex-column flex-xl-row gap-3 align-items-center mt-2">
+                                        <div>
+                                            <span class="gol_icon position-relative pe-4 textgray-100 fs-14">Gold</span>
+                                            <p class="border-start d-inline-block px-3 textgray-100 fs-14"><span
+                                                    class="me-3"><img src="images/listing/aff.png"
+                                                        alt="africa"></span>Africa</p>
+                                        </div>
+                                        <a href="#"
+                                            class="bgdark border rounded py-2 px-4 fs-14 text-decoration-none text_white d-inline-block text-center whitehover">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-12 row my-4 align-items-center">
+                            <div class="col-xl-4 mb-2 mb-xl-0">
+                                <div class="project_imgs">
+                                    <img src="images/listing/list4.png" class="w-100 rounded" alt="explore-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div>
+                                    <h3 class="textdarkgray fs-18">Sale of Mining and Exploration Tenements (Qld & SA),
+                                        and CIL Processing Plant (Qld)</h3>
+                                    <p class="col-sm-12 textgray-100 lh-20 fs-14 py-2">Gold mining can have
+                                        significant environmental and social impacts. It often involves the clearing of
+                                        land, displacement of local communities, and the use of large amounts of water
+                                        and chemicals. Mining operations can also result.</p>
+                                    <div class="d-flex justify-content-between flex-column flex-xl-row gap-3 align-items-center mt-2">
+                                        <div>
+                                            <span class="gol_icon position-relative pe-4 textgray-100 fs-14">Gold</span>
+                                            <p class="border-start d-inline-block px-3 textgray-100 fs-14"><span
+                                                    class="me-3"><img src="images/listing/aff.png"
+                                                        alt="africa"></span>Africa</p>
+                                        </div>
+                                        <a href="#"
+                                            class="bgdark border rounded py-2 px-4 fs-14 text-decoration-none text_white  d-inline-block text-center whitehover">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-12 row my-4 align-items-center">
+                            <div class="col-xl-4 mb-2 mb-xl-0">
+                                <div class="project_imgs">
+                                    <img src="images/listing/list5.png" class="w-100 rounded" alt="explore-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div>
+                                    <h3 class="textdarkgray fs-18">Sale of Mining and Exploration Tenements (Qld & SA),
+                                        and CIL Processing Plant (Qld)</h3>
+                                    <p class="col-sm-12 textgray-100 lh-20 fs-14 py-2">Gold mining can have
+                                        significant environmental and social impacts. It often involves the clearing of
+                                        land, displacement of local communities, and the use of large amounts of water
+                                        and chemicals. Mining operations can also result.</p>
+                                    <div class="d-flex justify-content-between flex-column flex-xl-row gap-3 align-items-center mt-2">
+                                        <div>
+                                            <span class="gol_icon position-relative pe-4 textgray-100 fs-14">Gold</span>
+                                            <p class="border-start d-inline-block px-3 textgray-100 fs-14"><span
+                                                    class="me-3"><img src="images/listing/aff.png"
+                                                        alt="africa"></span>Africa</p>
+                                        </div>
+                                        <a href="#"
+                                            class="bgdark border rounded py-2 px-4 fs-14 text-decoration-none text_white  d-inline-block text-center whitehover">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="col-sm-12 col-md-12 col-xl-12 footer_wrapper py-4 mt-4">
+            <div class="container">
+                <div class="row my-4 align-items-start gab-10">
+                    <div class="col-sm-12 col-md-12 col-xl-7 row m-0 p-sm-0 pe-md-0 pe-xl-4">
+                        <div class="col-xl-12 footer_navi">
+                            <h2 class="p-0 m-0 pb-4 text_gray fs-14">Navigation</h2>
+                            <div class="row m-0">
+                                <ul class="col-sm-12 col-md-4 col-xl-4 m-sm-0 p-0">
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">About Us</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Careers</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">For Partners</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Payment</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Contact Us</a></li>    
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">News</a></li>
+                                </ul>
+                                <ul class="col-sm-12 col-md-4 col-xl-4 m-sm-0 p-0">
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Brand Assets</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Newsletters</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Company Profile</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Client Endorsement</a></li>
+                                </ul>
+                                <ul class="col-sm-12 col-md-4 col-xl-4 m-sm-0 p-0">
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Buy</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Sell</a></li>
+                                    <li class="d-block d-block pb-1 pt-1"><a href="#" class="text_white text-decoration-none textorangehover">Enquiry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-xl-12 d-flex flex-xs-column flex-md-column flex-xl-row align-items-center justify-content-between mb-sm-3 mb-md-3">
+                            <div class="col-md-6 col-xl-6">
+                                <a href="#"><img src="images/home/logo.png" alt="logo-image"></a>
+                            </div>
+                            <div class="col-sm-6 col-sm-4 col-xl-2"> 
+                                <p class="fs-14 lh-6 text_white text_gray">Copyright Privacy All rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 row m-0">
+                        <h2 class="p-0 m-0 pb-4 text_gray fs-14">Contact us</h2>
+                        <div class="col-xl-6 p-0">
+                            <a href="tel:+919876543210" class="text_white text-decoration-none d-block py-1 textorangehover">+91 9876 543210</a>
+                            <a href="tel:+919876543210" class="text_white text-decoration-none d-block py-1 textorangehover">+91 9876 543210</a>
+                        </div>
+                        <div class="col-xl-6 p-0">
+                            <a href="mailto:generalenquiry@minex.com" class="text_white text-decoration-none d-block py-1 textorangehover">generalenquiry@minex.com</a>
+                        </div>
+                        <div class="col-xl-12 my-4 p-0 pb-3">
+                            <h2 class="p-0 m-0 pb-4 text_gray fs-14">Location</h2>
+                            <p class="d-block fs-14 text_white">2972 Westheimer Rd. Santa, Tamil Nadu 685486 </p>
+                        </div>
+                        <div class="col-12 col-xl-12 row">
+                            <div class="col-12 col-xl-7">
+                                <h2 class="p-0 m-0 pb-4 text_gray fs-14">Follow us</h2>
+                                <ul>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/facebook.png" alt="facebook-image"></a></li>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/googleplus.png" alt="google-image"></a></li>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/instagram.png" alt="instagram-image"></a></li>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/youtube.png" alt="youtube-image"></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-xl-5">
+                                <h2 class="p-0 m-0 pb-4 text_gray fs-14">Let’s chat</h2>
+                                <ul>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/whatsapp.png" alt="whatsapp-image"></a></li>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/telegram.png" alt="telegram-image"></a></li>
+                                    <li class="d-inline-block me-1"><a href="#"><img src="images/home/whatsapp1.png" alt="instagram-image"></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleFilterPanel() {
+            var filterPanel = document.getElementById("filterPanel");
+            filterPanel.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>
